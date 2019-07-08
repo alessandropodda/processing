@@ -9,7 +9,36 @@
     <body>
         <h1>Processing project by Antonio</h1>
         <script type="text/processing">
-
+void draw(){
+  secondi+=3;
+  minuti +=0.06;
+  ore +=0.0057;
+  pushMatrix();
+  ellipse(300,300,400,400);
+  rect(300,100,1,10);
+  rect(100,300,10,1);
+  rect(490,300,10,1);
+  rect(300,490,1,10);
+  translate(width/2,height/2);
+  rotate(radians(ore));
+  fill(0);
+  ellipse(0,0,10 ,10);
+  fill(0);
+  rect(0,0,100,5);
+  rotate(radians(minuti));
+  rect(0,0,120,2);
+  rotate(radians(secondi));
+  rect(0,0,150,1);
+  fill(255);
+  popMatrix();
+}
+float ore;
+float minuti;
+float secondi;
+void setup(){
+  size(600,600);
+  background(50,230,0);
+}
             // Write your project here
             
             // Example
